@@ -1,35 +1,54 @@
 from tkinter import *
 from tkinter import ttk
 
-color_one = "#000000"    #  preto
-color_two = "#feffff"    #  branco
-color_three = "#38576b"  #  azul 
-color_four = "ECEFF1"    #  cinza
-color_five = "#FFAB40"   #  laranja
+cor_um = "#000000"    # preto
+cor_dois = "#feffff"  # branco
+cor_tres = "#38576b"  # azul
+cor_quatro = "#ECEFF1" # cinza
+cor_cinco = "#FFAB40" # laranja
 
-window = Tk()
-window.title("Calculadora")
-window.geometry("235x318")
-window.config(bg=color_one)
+janela = Tk()
+janela.title("Calculadora")
+janela.geometry("235x318")
+janela.config(bg=cor_um)
 
-screen = Frame(window , width=235, height=50 , bg=color_three)
-screen.grid(row=0, column=0)
+tela = Frame(janela, width=235, height=50, bg=cor_tres)
+tela.grid(row=0, column=0)
 
-screen_body = Frame(window , width=235, height=268, )
-screen_body.grid(row=1, column=0)
+corpo_tela = Frame(janela, width=235, height=268)
+corpo_tela.grid(row=1, column=0)
 
-# Placing buttons
+# Colocando botões
 
-# row 1 
+# linha 1
 
-buttons_one = Button(screen_body, text="Clean", width=15, height=2)
-buttons_one.place(x=0, y=0)
+botao_um = Button(corpo_tela, text="Limpar", width=15, height=2, bg=cor_quatro, font=('Ivy 10 bold'), relief=RAISED, overrelief=RIDGE)
+botao_um.place(x=0, y=0)
 
-buttons_two = Button(screen_body, text="%", width=5, height=2)
-buttons_two.place(x=120, y=0)
+botao_dois = Button(corpo_tela, text="%", width=5, height=2, bg=cor_quatro, font=('Ivy 10 bold'), relief=RAISED, overrelief=RIDGE)
+botao_dois.place(x=118, y=0)
 
-buttons_three = Button(screen_body, text="/", width=5, height=2)
-buttons_three.place(x=180, y=0)
-# row 2 
+botao_tres = Button(corpo_tela, text="/", width=5, height=2, bg=cor_cinco, fg=cor_dois, font=('Ivy 10 bold'), relief=RAISED, overrelief=RIDGE)
+botao_tres.place(x=177, y=0)
 
-window.mainloop()
+# linha 2
+botao_quatro = Button(corpo_tela, text="7", width=5, height=2, bg=cor_quatro, font=('Ivy 10 bold'), relief=RAISED, overrelief=RIDGE)
+botao_quatro.place(x=0, y=46)
+
+botao_cinco = Button(corpo_tela, text="8", width=5, height=2, bg=cor_quatro, font=('Ivy 10 bold'), relief=RAISED, overrelief=RIDGE)
+botao_cinco.place(x=59, y=46)
+
+botao_seis = Button(corpo_tela, text="9", width=5, height=2, bg=cor_quatro, font=('Ivy 10 bold'), relief=RAISED, overrelief=RIDGE)
+botao_seis.place(x=118, y=46)
+
+botao_sete = Button(corpo_tela, text="*", width=5, height=2, bg=cor_cinco, fg=cor_dois, font=('Ivy 10 bold'), relief=RAISED, overrelief=RIDGE)
+botao_sete.place(x=177, y=46)
+
+
+# linha 3
+
+
+# linha 4
+
+janela.mainloop()
+

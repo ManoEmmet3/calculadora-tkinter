@@ -18,10 +18,21 @@ tela.grid(row=0, column=0)
 corpo_tela = Frame(janela, width=235, height=268)
 corpo_tela.grid(row=1, column=0)
 
+# criando função 
+
+def calcular():
+    resultado = eval("9/9")
+    #passando valor para a tela 
+    valor_texto.set(resultado)
+
+
+
+
 
 # criando label
+valor_texto = StringVar()
 
-app_label = Label(corpo_tela, text="123456789", width=16 , height=2)
+app_label = Label(tela, textvariable=valor_texto, width=16 , height=2 , padx=7 , relief=FLAT, anchor="e", justify= RIGHT, font=('Ivy 18 '), bg=cor_tres, fg=cor_dois)
 app_label.place(x= 0, y= 0)
 
 # Colocando botões
@@ -87,4 +98,7 @@ botao_18 = Button(corpo_tela, text="=", width=5, height=2, bg=cor_cinco, fg=cor_
 botao_18.place(x=177, y=183)
 
 
+# lógica da calculadora
+
+calcular()
 janela.mainloop()
